@@ -6,14 +6,8 @@ using System.Threading.Tasks;
 
 namespace ConsoleApplication1
 {
-    class Program
+    public enum Position
     {
-
-        static void Main(string[] args)
-        {
-            
-
-        }
-
+        Manager,Boos,Coloborator
     }
 }

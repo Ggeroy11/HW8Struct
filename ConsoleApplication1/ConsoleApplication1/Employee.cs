@@ -10,18 +10,8 @@ namespace ConsoleApplication1
     {
         public Guid id { get; set; }
         public string Name { get; set; }
-        public int Age { get; set; }
-        public string Position { get; set; }
+        public Position Position { get; set; }
         public int Salary { get; set; }
-
-        public void EmployeeInfo() {
-            Console.WriteLine("Имя {0}\nВозраст{1}\n id {2}", Name, Age, id);
-
-        }
-        
-
-        
-
-
+         
     }
 }
