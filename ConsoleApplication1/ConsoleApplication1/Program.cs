@@ -11,7 +11,8 @@ namespace ConsoleApplication1
 
         static void Main(string[] args)
         {
-            
+            Menu menu = new Menu();
+            menu.ShowMenu();
 
         }
 

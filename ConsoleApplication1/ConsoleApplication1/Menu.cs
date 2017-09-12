@@ -8,7 +8,7 @@ namespace ConsoleApplication1
 {
     public class Menu
     {
-        Employee[] employee;
+        static int count = 0;
         public void ShowMenu()
         {
             Console.WriteLine("Выберите пункт меню");
@@ -37,8 +37,52 @@ namespace ConsoleApplication1
         }
         private bool AddEmployee()
         {
+
+            
+            Employee employee= new Employee();
             Console.Clear();
-            Console.WriteLine();
+            Console.WriteLine("Введите имя сотрудника ");
+            employee.Name = Console.ReadLine();
+            if (employee.Name != null)
+            {
+                Console.WriteLine("Выберите должность");
+                Console.WriteLine("1 Босс");
+                Console.WriteLine("2 Менеджер");
+                Console.WriteLine("3 Сотрудник");
+                int position;
+                if (!Int32.TryParse(Console.ReadLine(), out position))
+                {
+                    if (position < 1 || position > 3)
+                    {
+                        return false;
+                    }
+                    employee.Position = (Position)position - 1;
+                }
+                else {
+                    return false;
+                }
+                Console.WriteLine("Введите зарплату");
+                int salary;
+                if (Int32.TryParse(Console.ReadLine(), out salary))
+                {
+                    employee.Salary = salary;
+                }
+                else
+                { 
+                    return false;
+                }
+                employee.EmployeeDate = Console.Read();
+                if (employee.EmployeeDate == 0)
+                {
+                    return false;
+                }
+
+                
+            }
+
+            count++;
+
+
             return true;
         }
 

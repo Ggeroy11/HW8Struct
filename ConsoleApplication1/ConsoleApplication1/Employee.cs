@@ -8,10 +8,11 @@ namespace ConsoleApplication1
 {
     public struct Employee
     {
-        public Guid id { get; set; }
+        public int EmployeeDate{ get; set; }
         public string Name { get; set; }
         public Position Position { get; set; }
         public int Salary { get; set; }
+        
          
     }
 }
